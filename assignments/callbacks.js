@@ -30,25 +30,45 @@ function getLength(arr, cb) {
   return cb = (arr.length);
 }
 
-getLength(arr, cb(length)){
-  console.log(length)
-}
+getLength(items, function(first) {
+  console.log(first);
+});
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
+  //return the cb 
+  return cb(arr.slice(-1).pop());
 }
+
+last(items, function(last){
+  console.log(last)
+});
+
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+
+  return cb (y+x);
 }
+sumNums(12, 9, function(add){
+  console.log(add)
+})
 
 function multiplyNums(x, y, cb) {
-  // multiplyNums multiplies two numbers and passes the result to the callback.
+ return cb(x*y)
 }
 
+multiplyNums(3, 4, function(multiply){
+  console.log(multiply)
+});
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  return cb(list.includes(item))
+}
+
+contains('truthy value', items, function(cb){
+    console.log(cb)
 }
 
 /* STRETCH PROBLEM */
