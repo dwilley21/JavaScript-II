@@ -1,6 +1,14 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
+//This is a closure 
 
+const cat = () =>{
+  let kitten = "Milo"
+    const makeKitten = () => {
+      ///clossure 
+      return kitten;
+    }
+}
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
